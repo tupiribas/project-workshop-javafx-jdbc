@@ -43,9 +43,10 @@ public class MainViewController implements Initializable {
 	}
 
 	@Override
-	public void initialize(URL uri, ResourceBundle rb) {
+	public void initialize(URL url, ResourceBundle rb) {
 	}
 
+	// Navegar entre as janelas
 	private synchronized void loadView(String absoluteName) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
@@ -60,7 +61,7 @@ public class MainViewController implements Initializable {
 			mainVBox.getChildren().addAll(newVBox.getChildren());
 		} 
 		catch (IOException e) {
-			Alerts.showAlert("IO Exception", "Error load view", e.getMessage(), AlertType.ERROR);
+			Alerts.showAlert("IO Exception", "Bug load view", e.getMessage(), AlertType.ERROR);
 		}
 	}
 }

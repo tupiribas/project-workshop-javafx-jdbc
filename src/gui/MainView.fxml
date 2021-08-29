@@ -6,34 +6,21 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.VBox?>
 
-<ScrollPane fx:id="telaprincipal" maxHeight="-Infinity"
-	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-	prefHeight="400.0" prefWidth="600.0"
-	xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="gui.MainViewController">
+<ScrollPane fx:id="telaprincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
 	<content>
-		<VBox prefHeight="321.0" prefWidth="504.0"
-			styleClass="background">
+		<VBox prefHeight="321.0" prefWidth="504.0" styleClass="background">
 			<children>
-				<MenuBar styleClass="background"
-					stylesheets="@../application/application.css">
+				<MenuBar styleClass="background" stylesheets="@../application/application.css">
 					<menus>
-						<Menu id="Registation" mnemonicParsing="false"
-							text="Registration">
+						<Menu id="Registation" mnemonicParsing="false" text="Registration">
 							<items>
-								<MenuItem id="Seller" fx:id="menuItemSeller"
-									mnemonicParsing="false" onAction="#onMenuItemSellerAction"
-									text="Seller" />
-								<MenuItem id="Department" fx:id="menuItemDepartment"
-									mnemonicParsing="false" onAction="#onMenuItemDepartmentAction"
-									text="Department" />
+								<MenuItem id="Seller" fx:id="menuItemSeller" mnemonicParsing="false" onAction="#onMenuItemSellerAction" text="Seller" />
+								<MenuItem id="Department" fx:id="menuItemDepartment" mnemonicParsing="false" onAction="#onMenuItemDepartmentAction" text="Department" />
 							</items>
 						</Menu>
 						<Menu id="Help" mnemonicParsing="false" text="Help">
 							<items>
-								<MenuItem id="About" fx:id="menuItemAbout"
-									mnemonicParsing="false" onAction="#onMenuItemAboutAction"
-									text="About" />
+								<MenuItem id="About" fx:id="menuItemAbout" mnemonicParsing="false" onAction="#onMenuItemAboutAction" text="About" />
 							</items>
 						</Menu>
 					</menus>
