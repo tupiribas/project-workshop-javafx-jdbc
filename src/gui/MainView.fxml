@@ -6,15 +6,17 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.VBox?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity"
-	minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
-	prefWidth="600.0" xmlns="http://javafx.com/javafx/11"
-	xmlns:fx="http://javafx.com/fxml/1"
+<ScrollPane fx:id="telaprincipal" maxHeight="-Infinity"
+	maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+	prefHeight="400.0" prefWidth="600.0"
+	xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
 	fx:controller="gui.MainViewController">
 	<content>
-		<VBox prefHeight="321.0" prefWidth="504.0">
+		<VBox prefHeight="321.0" prefWidth="504.0"
+			styleClass="background">
 			<children>
-				<MenuBar>
+				<MenuBar styleClass="background"
+					stylesheets="@../application/application.css">
 					<menus>
 						<Menu id="Registation" mnemonicParsing="false"
 							text="Registration">
