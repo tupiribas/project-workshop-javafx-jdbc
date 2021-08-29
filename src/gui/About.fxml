@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox prefHeight="199.0" prefWidth="396.0"
+	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11">
+	<children>
+		<Label id="About" text="About">
+			<font>
+				<Font name="System Bold" size="18.0" />
+			</font>
+			<padding>
+				<Insets bottom="10.0" left="20.0" top="10.0" />
+			</padding>
+		</Label>
+		<Label id="TextoAbout" accessibleHelp="Texto"
+			accessibleRoleDescription="Introduzindo no desenvolvimento de aplicações JavaFX com JDBC."
+			accessibleText="Introduzindo no desenvolvimento de aplicações JavaFX com JDBC."
+			ellipsisString="" prefHeight="50.0" prefWidth="401.0"
+			text="Introduzindo no desenvolvimento de aplicações JavaFX com JDBC."
+			textOverrun="LEADING_WORD_ELLIPSIS">
+			<padding>
+				<Insets bottom="10.0" left="20.0" />
+			</padding>
+		</Label>
+	</children>
+</VBox>
