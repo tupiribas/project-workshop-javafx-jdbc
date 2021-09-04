@@ -10,58 +10,79 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane prefHeight="130.0" prefWidth="277.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16">
-   <children>
-      <GridPane layoutX="29.0" layoutY="32.0" prefHeight="94.0" prefWidth="226.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.00002030413998" minWidth="10.0" prefWidth="41.491539415700906" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="280.47456482928646" minWidth="10.0" prefWidth="185.49151876965206" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Label id="labelid" text="Id" />
-            <Label id="labelname" layoutX="10.0" layoutY="17.0" prefHeight="17.0" prefWidth="42.0" text="Name" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets top="10.0" />
-               </GridPane.margin>
-            </Label>
-            <TextField id="txtinputid" blendMode="ADD" editable="false" GridPane.columnIndex="1" />
-            <TextField id="txtinputname" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets top="10.0" />
-               </GridPane.margin>
-            </TextField>
-            <Label id="labelmensageerro" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
-               <children>
-                  <Button id="btcancel" mnemonicParsing="false" text="Cancel">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Button>
-                  <Button id="btsave" mnemonicParsing="false" text="Save" textFill="#25a829">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Button>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <padding>
-                  <Insets top="5.0" />
-               </padding>
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-            </HBox>
-         </children>
-      </GridPane>
-   </children>
+<AnchorPane prefHeight="130.0" prefWidth="277.0"
+	xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="gui.DepartmentFormController">
+	<children>
+		<GridPane layoutX="29.0" layoutY="32.0" prefHeight="94.0"
+			prefWidth="226.0" AnchorPane.leftAnchor="20.0"
+			AnchorPane.topAnchor="20.0">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="156.00002030413998" minWidth="10.0"
+					prefWidth="41.491539415700906" />
+				<ColumnConstraints hgrow="SOMETIMES"
+					maxWidth="280.47456482928646" minWidth="10.0"
+					prefWidth="185.49151876965206" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<Label id="labelid" text="Id" />
+				<Label id="labelname" layoutX="10.0" layoutY="17.0"
+					prefHeight="17.0" prefWidth="42.0" text="Name"
+					GridPane.rowIndex="1">
+					<GridPane.margin>
+						<Insets top="10.0" />
+					</GridPane.margin>
+				</Label>
+				<TextField id="txtId" fx:id="txtId" blendMode="ADD"
+					editable="false" GridPane.columnIndex="1" />
+				<TextField id="txtName" fx:id="txtName"
+					GridPane.columnIndex="1" GridPane.rowIndex="1">
+					<GridPane.margin>
+						<Insets top="10.0" />
+					</GridPane.margin>
+				</TextField>
+				<Label id="labelErrorMensage" fx:id="labelErrorMensage"
+					textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+				<HBox alignment="TOP_RIGHT" prefHeight="100.0"
+					prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1"
+					GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+					<children>
+						<Button id="btCancel" fx:id="btCancel"
+							mnemonicParsing="false" onAction="#onBtCancelAction"
+							text="Cancel">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+						</Button>
+						<Button id="btSave" fx:id="btSave" mnemonicParsing="false"
+							onAction="#onBtSaveAction" text="Save" textFill="#25a829">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+						</Button>
+					</children>
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+					<padding>
+						<Insets top="5.0" />
+					</padding>
+					<GridPane.margin>
+						<Insets />
+					</GridPane.margin>
+				</HBox>
+			</children>
+		</GridPane>
+	</children>
 </AnchorPane>
