@@ -30,7 +30,7 @@ public class DepartmentFormController implements Initializable {
 	private DepartmentService service;
 	
 	private List<DataChangeListener> dataChangeListeners = new ArrayList<>();
-
+	
 	@FXML
 	private TextField txtId;
 
@@ -116,6 +116,7 @@ public class DepartmentFormController implements Initializable {
 	}
 
 	private void initializeNodes() {
+		Constraints.setTextFieldInteger(txtId);
 		Constraints.setFieldMaxLength(txtName, 30);
 	}
 
@@ -123,6 +124,7 @@ public class DepartmentFormController implements Initializable {
 		if (entity == null) {
 			throw new IllegalStateException("Entity was null");
 		}
+		
 		txtId.setText(String.valueOf(entity.getId()));
 		txtName.setText(entity.getName());
 	}

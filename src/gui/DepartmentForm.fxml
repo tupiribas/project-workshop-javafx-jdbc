@@ -44,8 +44,8 @@
 						<Insets top="10.0" />
 					</GridPane.margin>
 				</Label>
-				<TextField id="txtId" fx:id="txtId" blendMode="ADD"
-					editable="false" GridPane.columnIndex="1" />
+				<TextField id="txtId2" fx:id="txtId" editable="false"
+					GridPane.columnIndex="1" />
 				<TextField id="txtName" fx:id="txtName"
 					GridPane.columnIndex="1" GridPane.rowIndex="1">
 					<GridPane.margin>
