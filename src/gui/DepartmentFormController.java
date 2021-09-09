@@ -79,10 +79,10 @@ public class DepartmentFormController implements Initializable {
 	@FXML
 	public void onBtSaveAction(ActionEvent event) {
 		if (entity == null) {
-			throw new IllegalStateException("Entity was null!");
+			throw new IllegalStateException("Defalt cod.:04 >>>Entity was null!");
 		}
 		if (service == null) {
-			throw new IllegalStateException("Service was null!");
+			throw new IllegalStateException("Defalt cod.:03 >>>Service was null!");
 		}
 		try {
 			entity = getFormData();
@@ -95,7 +95,7 @@ public class DepartmentFormController implements Initializable {
 			setErrorMessage(e.getErrorMessages());
 		}
 		catch (DbException e) {
-			Alerts.showAlert("Error saving object", null, "Defect cod.:03>>> Connect to the database", AlertType.ERROR);
+			Alerts.showAlert("Error saving object", null, "Connect to the database", AlertType.ERROR);
 		}
 	}
 
@@ -122,7 +122,7 @@ public class DepartmentFormController implements Initializable {
 
 	public void updateFormData() {
 		if (entity == null) {
-			throw new IllegalStateException("Entity was null");
+			throw new IllegalStateException("Defalt cod.:02 >>>Entity was null");
 		}
 		
 		txtId.setText(String.valueOf(entity.getId()));

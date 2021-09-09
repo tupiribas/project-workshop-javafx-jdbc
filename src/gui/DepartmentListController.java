@@ -3,9 +3,11 @@ package gui;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import application.Main;
+import db.DbIntegrityException;
 import gui.listener.DataChangeListener;
 import gui.util.Alerts;
 import gui.util.Utils;
@@ -19,6 +21,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -31,7 +34,7 @@ import model.services.DepartmentService;
 
 public class DepartmentListController implements Initializable, DataChangeListener {
 
-	private DepartmentService departmentService;
+	private DepartmentService service;
 
 	@FXML
 	private TableView<Department> tableViewDepartment;
@@ -44,6 +47,9 @@ public class DepartmentListController implements Initializable, DataChangeListen
 
 	@FXML
 	private TableColumn<Department, Department> tableColumnEDIT;
+	
+	@FXML
+	private TableColumn<Department, Department> tableColumnREMOVE;
 
 	@FXML
 	private Button btNew; // Toobar
@@ -58,7 +64,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 	}
 
 	public void setDepartmentService(DepartmentService departmentService) {
-		this.departmentService = departmentService;
+		this.service = departmentService;
 	}
 
 	@Override
@@ -77,21 +83,22 @@ public class DepartmentListController implements Initializable, DataChangeListen
 	}
 
 	public void uppdateTableView() {
-		if (departmentService == null) {
-			throw new IllegalStateException("Defect cod.:02>>> service was null");
+		if (service == null) {
+			throw new IllegalStateException("Defect cod.:05>>> service was null");
 		} 
 		/*
 		 * Cria uma lista local e atribui a ela os valores criados na classe
 		 * DepartmentService
 		 */
-		List<Department> list = departmentService.findAll();
+		List<Department> list = service.findAll();
 
-		// Pega os valores da lista local e joga para a obsDepartmentList
+		// Atribui os valores da lista local e joga para a obsDepartmentList
 		obsDepartmentList = FXCollections.observableList(list);
 
-		// Pega os valores obsDepartmentList e joga para a tableViewDepartment
+		// Armazena tableViewDepartment os valores de obsDepartmentList
 		tableViewDepartment.setItems(obsDepartmentList);
 		initEditButtons();
+		initRemoveButtons();
 	}
 
 	private void createDialogForm(Department obj, String absoluteName, Stage parentStage) {
@@ -115,7 +122,7 @@ public class DepartmentListController implements Initializable, DataChangeListen
 			dialogStage.showAndWait();
 		} 
 		catch (IOException e) {
-			Alerts.showAlert("IO Exception", null, "Defect cod.:02>>> loading view", AlertType.ERROR);
+			Alerts.showAlert("IO Exception", null, "Looading view form Department", AlertType.ERROR);
 		}
 	}
 
@@ -141,6 +148,44 @@ public class DepartmentListController implements Initializable, DataChangeListen
 						event -> createDialogForm(obj, "/gui/DepartmentForm.fxml", Utils.currentStage(event)));
 			}
 		});
+	}
+	
+	private void initRemoveButtons() {
+		tableColumnREMOVE.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
+		tableColumnREMOVE.setCellFactory(param -> new TableCell<Department, Department>() {
+			private final Button button = new Button("remove");
+			
+			@Override
+			protected void updateItem(Department obj, boolean empty) {
+				super.updateItem(obj, empty);
+				
+				if (obj == null) {
+					setGraphic(null);
+					return;
+				}
+				
+				setGraphic(button);
+				button.setOnAction(event -> removeEntity(obj));
+			}
+			
+		});
+	}
+	
+	private void removeEntity(Department obj) {
+		Optional<ButtonType> result = Alerts.showConfirmation("Confirmation", "Are you sure to delete?");
+		
+		if (result.get() == ButtonType.OK) {
+			if (service == null) {
+				throw new IllegalStateException("Defalt cod.:06 >>>Service was null");
+			}
+			try {
+				service.remove(obj);
+				uppdateTableView();
+			} 
+			catch (DbIntegrityException e) {
+				Alerts.showAlert("Database integrity", null, e.getMessage(), AlertType.ERROR);
+			}
+		}
 	}
 
 }
