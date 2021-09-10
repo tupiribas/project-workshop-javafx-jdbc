@@ -12,11 +12,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="310.0" prefWidth="366.0"
+<AnchorPane prefHeight="331.0" prefWidth="366.0"
 	xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
 	fx:controller="gui.SellerFormController">
 	<children>
-		<GridPane layoutX="18.0" layoutY="18.0" prefHeight="231.0"
+		<GridPane layoutX="18.0" layoutY="18.0" prefHeight="270.0"
 			prefWidth="305.0" AnchorPane.leftAnchor="18.0"
 			AnchorPane.topAnchor="18.0">
 			<columnConstraints>
@@ -55,6 +55,8 @@
 			</rowConstraints>
 			<children>
 				<Label id="labelid" text="Id (automatic)" />
+				<TextField id="txtId2" fx:id="txtId" editable="false"
+					prefHeight="25.0" prefWidth="105.0" GridPane.columnIndex="1" />
 				<Label id="labelname" layoutX="10.0" layoutY="17.0"
 					prefHeight="17.0" prefWidth="42.0" text="Name *"
 					GridPane.rowIndex="2">
@@ -62,8 +64,6 @@
 						<Insets top="10.0" />
 					</GridPane.margin>
 				</Label>
-				<TextField id="txtId2" fx:id="txtId" editable="false"
-					prefHeight="25.0" prefWidth="105.0" GridPane.columnIndex="1" />
 				<TextField id="txtName" fx:id="txtName"
 					GridPane.columnIndex="1" GridPane.rowIndex="2">
 					<GridPane.margin>
@@ -71,20 +71,36 @@
 					</GridPane.margin>
 				</TextField>
 				<Label id="labelErrorName" fx:id="labelErrorName"
-					textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+					textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3">
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+				</Label>
 				<Label id="labelEmail" layoutX="82.0" layoutY="117.0"
 					text="Email" GridPane.rowIndex="4" />
 				<TextField id="txtEmail" fx:id="txtEmail"
-					GridPane.columnIndex="1" GridPane.rowIndex="4" />
+					GridPane.columnIndex="1" GridPane.rowIndex="4">
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+				</TextField>
 				<Label id="labelErrorEmail" fx:id="labelErrorEmail"
-					textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+					textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="5">
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+				</Label>
 				<Label id="labelBirthDate" layoutX="10.0" layoutY="137.0"
 					text="Birth Date" GridPane.rowIndex="6" />
 				<DatePicker id="dpBirthDate" fx:id="dpBirthDate"
 					GridPane.columnIndex="1" GridPane.rowIndex="6" />
 				<Label id="labelErrorBirthDate" fx:id="labelErrorBirthDate"
 					layoutX="72.0" layoutY="167.0" textFill="RED"
-					GridPane.columnIndex="1" GridPane.rowIndex="7" />
+					GridPane.columnIndex="1" GridPane.rowIndex="7">
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+				</Label>
 				<Label id="labelBaseSalary" layoutX="72.0" layoutY="167.0"
 					text="Base Salary" GridPane.rowIndex="8" />
 				<TextField id="txtBaseSalary" fx:id="txtBaseSalary"
@@ -92,7 +108,11 @@
 					GridPane.rowIndex="8" />
 				<Label id="labelErrorBaseSalary" fx:id="labelErrorBaseSalary"
 					layoutX="72.0" layoutY="227.0" textFill="RED"
-					GridPane.columnIndex="1" GridPane.rowIndex="9" />
+					GridPane.columnIndex="1" GridPane.rowIndex="9">
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+				</Label>
 				<Label id="labelDepartment" text="Department"
 					GridPane.rowIndex="10" />
 				<ComboBox id="comboBoxDepartment"
@@ -127,6 +147,9 @@
 					</GridPane.margin>
 				</HBox>
 			</children>
+			<opaqueInsets>
+				<Insets left="10.0" right="10.0" top="10.0" />
+			</opaqueInsets>
 		</GridPane>
 	</children>
 </AnchorPane>
