@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="282.0" prefWidth="366.0"
+<AnchorPane prefHeight="310.0" prefWidth="366.0"
 	xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
 	fx:controller="gui.SellerFormController">
 	<children>
@@ -27,6 +28,8 @@
 					prefWidth="227.79662630058735" />
 			</columnConstraints>
 			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0"
+					vgrow="SOMETIMES" />
 				<RowConstraints minHeight="10.0" prefHeight="30.0"
 					vgrow="SOMETIMES" />
 				<RowConstraints minHeight="10.0" prefHeight="30.0"
@@ -90,9 +93,14 @@
 				<Label id="labelErrorBaseSalary" fx:id="labelErrorBaseSalary"
 					layoutX="72.0" layoutY="227.0" textFill="RED"
 					GridPane.columnIndex="1" GridPane.rowIndex="9" />
+				<Label id="labelDepartment" text="Department"
+					GridPane.rowIndex="10" />
+				<ComboBox id="comboBoxDepartment"
+					fx:id="comboBoxDepartment" prefWidth="150.0"
+					GridPane.columnIndex="1" GridPane.rowIndex="10" />
 				<HBox alignment="TOP_RIGHT" prefHeight="100.0"
 					prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1"
-					GridPane.halignment="RIGHT" GridPane.rowIndex="10">
+					GridPane.halignment="RIGHT" GridPane.rowIndex="11">
 					<children>
 						<Button id="btCancel" fx:id="btCancel"
 							mnemonicParsing="false" onAction="#onBtCancelAction"
@@ -112,7 +120,7 @@
 						<Insets />
 					</opaqueInsets>
 					<padding>
-						<Insets top="5.0" />
+						<Insets left="10.0" top="20.0" />
 					</padding>
 					<GridPane.margin>
 						<Insets top="20.0" />

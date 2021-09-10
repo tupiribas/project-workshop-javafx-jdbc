@@ -124,7 +124,6 @@ public class DepartmentFormController implements Initializable {
 		if (entity == null) {
 			throw new IllegalStateException("Defalt cod.:02 >>>Entity was null");
 		}
-		
 		txtId.setText(String.valueOf(entity.getId()));
 		txtName.setText(entity.getName());
 	}
