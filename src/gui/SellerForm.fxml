@@ -12,125 +12,80 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="331.0" prefWidth="366.0"
-	xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1"
-	fx:controller="gui.SellerFormController">
+<AnchorPane prefHeight="331.0" prefWidth="366.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SellerFormController">
 	<children>
-		<GridPane layoutX="18.0" layoutY="18.0" prefHeight="270.0"
-			prefWidth="305.0" AnchorPane.leftAnchor="18.0"
-			AnchorPane.topAnchor="18.0">
+		<GridPane layoutX="18.0" layoutY="18.0" prefHeight="270.0" prefWidth="305.0" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="18.0">
 			<columnConstraints>
-				<ColumnConstraints hgrow="SOMETIMES"
-					maxWidth="156.00002030413998" minWidth="10.0"
-					prefWidth="78.10168867322167" />
-				<ColumnConstraints hgrow="SOMETIMES"
-					maxWidth="280.47456482928646" minWidth="10.0"
-					prefWidth="227.79662630058735" />
+				<ColumnConstraints hgrow="SOMETIMES" maxWidth="156.00002030413998" minWidth="10.0" prefWidth="78.10168867322167" />
+				<ColumnConstraints hgrow="SOMETIMES" maxWidth="280.47456482928646" minWidth="10.0" prefWidth="227.79662630058735" />
 			</columnConstraints>
 			<rowConstraints>
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
-				<RowConstraints minHeight="10.0" prefHeight="30.0"
-					vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
 			</rowConstraints>
 			<children>
 				<Label id="labelid" text="Id (automatic)" />
-				<TextField id="txtId2" fx:id="txtId" editable="false"
-					prefHeight="25.0" prefWidth="105.0" GridPane.columnIndex="1" />
-				<Label id="labelname" layoutX="10.0" layoutY="17.0"
-					prefHeight="17.0" prefWidth="42.0" text="Name *"
-					GridPane.rowIndex="2">
+				<TextField id="txtId2" fx:id="txtId" editable="false" prefHeight="25.0" prefWidth="105.0" GridPane.columnIndex="1" />
+				<Label id="labelname" layoutX="10.0" layoutY="17.0" prefHeight="17.0" prefWidth="42.0" text="Name *" GridPane.rowIndex="2">
 					<GridPane.margin>
 						<Insets top="10.0" />
 					</GridPane.margin>
 				</Label>
-				<TextField id="txtName" fx:id="txtName"
-					GridPane.columnIndex="1" GridPane.rowIndex="2">
+				<TextField id="txtName" fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="2">
 					<GridPane.margin>
 						<Insets />
 					</GridPane.margin>
 				</TextField>
-				<Label id="labelErrorName" fx:id="labelErrorName"
-					textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3">
+				<Label id="labelErrorName" fx:id="labelErrorName" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="3">
 					<opaqueInsets>
 						<Insets />
 					</opaqueInsets>
 				</Label>
-				<Label id="labelEmail" layoutX="82.0" layoutY="117.0"
-					text="Email" GridPane.rowIndex="4" />
-				<TextField id="txtEmail" fx:id="txtEmail"
-					GridPane.columnIndex="1" GridPane.rowIndex="4">
+				<Label id="labelEmail" layoutX="82.0" layoutY="117.0" text="Email" GridPane.rowIndex="4" />
+				<TextField id="txtEmail" fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="4">
 					<opaqueInsets>
 						<Insets />
 					</opaqueInsets>
 				</TextField>
-				<Label id="labelErrorEmail" fx:id="labelErrorEmail"
-					textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="5">
+				<Label id="labelErrorEmail" fx:id="labelErrorEmail" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="5">
 					<opaqueInsets>
 						<Insets />
 					</opaqueInsets>
 				</Label>
-				<Label id="labelBirthDate" layoutX="10.0" layoutY="137.0"
-					text="Birth Date" GridPane.rowIndex="6" />
-				<DatePicker id="dpBirthDate" fx:id="dpBirthDate"
-					GridPane.columnIndex="1" GridPane.rowIndex="6" />
-				<Label id="labelErrorBirthDate" fx:id="labelErrorBirthDate"
-					layoutX="72.0" layoutY="167.0" textFill="RED"
-					GridPane.columnIndex="1" GridPane.rowIndex="7">
+				<Label id="labelBirthDate" layoutX="10.0" layoutY="137.0" text="Birth Date" GridPane.rowIndex="6" />
+				<DatePicker id="dpBirthDate" fx:id="dpBirthDate" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+				<Label id="labelErrorBirthDate" fx:id="labelErrorBirthDate" layoutX="72.0" layoutY="167.0" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="7">
 					<opaqueInsets>
 						<Insets />
 					</opaqueInsets>
 				</Label>
-				<Label id="labelBaseSalary" layoutX="72.0" layoutY="167.0"
-					text="Base Salary" GridPane.rowIndex="8" />
-				<TextField id="txtBaseSalary" fx:id="txtBaseSalary"
-					layoutX="72.0" layoutY="193.0" GridPane.columnIndex="1"
-					GridPane.rowIndex="8" />
-				<Label id="labelErrorBaseSalary" fx:id="labelErrorBaseSalary"
-					layoutX="72.0" layoutY="227.0" textFill="RED"
-					GridPane.columnIndex="1" GridPane.rowIndex="9">
+				<Label id="labelBaseSalary" layoutX="72.0" layoutY="167.0" text="Base Salary" GridPane.rowIndex="8" />
+				<TextField id="txtBaseSalary" fx:id="txtBaseSalary" layoutX="72.0" layoutY="193.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+				<Label id="labelErrorBaseSalary" fx:id="labelErrorBaseSalary" layoutX="72.0" layoutY="227.0" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="9">
 					<opaqueInsets>
 						<Insets />
 					</opaqueInsets>
 				</Label>
-				<Label id="labelDepartment" text="Department"
-					GridPane.rowIndex="10" />
-				<ComboBox id="comboBoxDepartment"
-					fx:id="comboBoxDepartment" prefWidth="150.0"
-					GridPane.columnIndex="1" GridPane.rowIndex="10" />
-				<HBox alignment="TOP_RIGHT" prefHeight="100.0"
-					prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1"
-					GridPane.halignment="RIGHT" GridPane.rowIndex="11">
+				<Label id="labelDepartment" text="Department" GridPane.rowIndex="10" />
+				<ComboBox id="comboBoxDepartment" fx:id="comboBoxDepartment" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+				<HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="11">
 					<children>
-						<Button id="btCancel" fx:id="btCancel"
-							mnemonicParsing="false" onAction="#onBtCancelAction"
-							text="Cancel">
+						<Button id="btCancel" fx:id="btCancel" mnemonicParsing="false" onAction="#onBtCancelAction" text="Cancel">
 							<HBox.margin>
 								<Insets />
 							</HBox.margin>
 						</Button>
-						<Button id="btSave" fx:id="btSave" mnemonicParsing="false"
-							onAction="#onBtSaveAction" text="Save" textFill="#25a829">
+						<Button id="btSave" fx:id="btSave" mnemonicParsing="false" onAction="#onBtSaveAction" text="Save" textFill="#25a829">
 							<HBox.margin>
 								<Insets />
 							</HBox.margin>
